@@ -25,8 +25,8 @@ def main():
     model = TextToVideoModel(
         d_model=768,
         num_frames=16,
-        height=256,
-        width=256,
+        height=512,   # Change this value
+        width=512,    # Change this value
         num_timesteps=100,  # Reduced for faster generation
         num_heads=8,
         num_layers=6  # Reduced for faster generation
@@ -40,8 +40,8 @@ def main():
         num_samples=100,
         batch_size=4,
         num_frames=16,
-        height=256,
-        width=256,
+        height=512,   # Change this value
+        width=512,    # Change this value
         split_ratio=(0.8, 0.1, 0.1)
     )
     print(f"Created dataloaders: {len(train_loader)} train, {len(val_loader)} val, {len(test_loader)} test batches")
