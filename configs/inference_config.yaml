@@ -1,0 +1,35 @@
+# Inference Configuration for Text-to-Video Generation
+
+# Model Architecture (must match training config)
+model:
+  d_model: 768
+  num_frames: 16
+  height: 256
+  width: 256
+  num_timesteps: 1000
+  num_heads: 8
+  num_layers: 12
+
+# Generation Parameters
+generation:
+  batch_size: 1
+  fps: 8
+  seed: 42
+  
+# Output
+output:
+  format: "mp4"  # mp4, avi, gif
+  save_frames: true
+  output_dir: "generated_videos"
+
+# Hardware
+hardware:
+  device: "auto"  # auto, cpu, cuda
+
+# Example texts for generation
+example_texts:
+  - "A cat playing with a ball in the garden"
+  - "A dog running through a field of flowers"
+  - "A bird soaring over a mountain landscape"
+  - "A car driving on a winding road at sunset"
+  - "A person walking in a busy city street" 

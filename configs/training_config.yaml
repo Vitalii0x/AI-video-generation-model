@@ -1,0 +1,65 @@
+# Training Configuration for Text-to-Video Generation Model
+
+# Model Architecture
+model:
+  d_model: 768
+  num_frames: 16
+  height: 256
+  width: 256
+  num_timesteps: 1000
+  num_heads: 8
+  num_layers: 12
+  d_ff: 3072
+  dropout: 0.1
+
+# Training Parameters
+training:
+  batch_size: 4
+  num_epochs: 100
+  learning_rate: 1e-4
+  weight_decay: 1e-4
+  gradient_clip: 1.0
+  warmup_steps: 1000
+  
+  # Data
+  num_workers: 4
+  synthetic_samples: 1000
+  
+  # Logging
+  log_interval: 100
+  sample_interval: 1000
+  save_interval: 1000
+  
+  # Output
+  output_dir: "outputs"
+  use_wandb: false
+  wandb_project: "text-to-video"
+
+# Data Configuration
+data:
+  # Real data (optional)
+  use_real_data: false
+  data_dir: ""
+  annotation_file: ""
+  
+  # Synthetic data
+  text_templates:
+    - "A cat playing with a ball"
+    - "A dog running in the park"
+    - "A bird flying in the sky"
+    - "A car driving on the road"
+    - "A person walking down the street"
+    - "A flower blooming in the garden"
+    - "A tree swaying in the wind"
+    - "A river flowing through the valley"
+    - "A mountain peak covered in snow"
+    - "A sunset over the ocean"
+
+# Hardware
+hardware:
+  device: "auto"  # auto, cpu, cuda
+  mixed_precision: true
+  num_gpus: 1
+
+# Random seed
+seed: 42 
