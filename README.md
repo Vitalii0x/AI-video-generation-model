@@ -2,6 +2,11 @@
 
 This project implements a state-of-the-art text-to-video generation model using transformer architecture and diffusion models.
 
+---
+https://github.com/user-attachments/assets/3883bd71-25e7-45ee-a938-b16a7557dc4c
+
+https://github.com/user-attachments/assets/fb61fe5b-5b13-4e50-8c4b-a104e087214b
+
 ## Features
 
 - **Text-to-Video Generation**: Generate videos from natural language descriptions
