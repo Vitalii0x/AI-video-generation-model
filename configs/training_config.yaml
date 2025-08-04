@@ -15,7 +15,7 @@ model:
 # Training Parameters
 training:
   batch_size: 4
-  num_epochs: 100
+  num_epochs: 500  # Increased from 100 to 500
   learning_rate: 1e-4
   weight_decay: 1e-4
   gradient_clip: 1.0
